@@ -1,4 +1,4 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------------------------------------------------------------------%
 %	The MIT License (MIT)
 %
 %	Copyright (c) 2021 Jitin Nair
@@ -19,42 +19,27 @@
 %	THE SOFTWARE.
 %	
 %
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%-----------------------------------------------------------------------------------------------------------------------------------------%
 
 %----------------------------------------------------------------------------------------
 %	DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
+\documentclass[a4paper,9pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}
+\usepackage{fancyhdr}
 
 %other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.91]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -79,17 +64,12 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\titlespacing{\section}{0pt}{8pt}{8pt}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\definecolor{linkcolour}{rgb}{0,0,0}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
 
 %for social icons
 \usepackage{fontawesome5}
@@ -114,7 +94,7 @@
     \textbf{#1} & \hfill &  #2 \\[3.75pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=$\circ$]
     }
     {
     \end{itemize}
@@ -135,48 +115,57 @@
 %	TITLE
 %----------------------------------------------------------------------------------------
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+    \Huge{Elia Franzella --- Software Developer} \\[7.5pt]
+    \href{https://github.com/nin93}{\raisebox{-0.05\height}\faGithub\ nin93} \ $|$ \ 
+    \href{https://www.linkedin.com/in/elia-franzella-20a046234/}{\raisebox{-0.05\height}\faLinkedin\ elia-franzella} \ $|$ \ 
+    \href{https://www.franzella.dev}{\raisebox{-0.05\height}\faGlobe \ franzella.dev} \ $|$ \ 
+    \href{mailto:franzella.elia@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ franzella.elia@gmail.com} \ $|$ \ 
+    \href{tel:+393273469715}{\raisebox{-0.05\height}\faMobile \ +39 3273469715}  \ $|$ \ 
+    \raisebox{-0.05\height}\faMapMarker \ Palermo, Italy \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+%   SUMMARY
 %----------------------------------------------------------------------------------------
 
-%Interests/ Keywords/ Summary
 \section{Summary}
-This CV can also be automatically compiled and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+Software developer with 5 years of experience designing and implementing scalable, cloud-native and event-driven backend systems. I have collaborated closely with product managers, designers and DevOps teams in large, product-focused projects, working within Agile/Scrum cycles and rapid integration and delivery workflows. I am now seeking a role where I can leverage my full-stack development skills.
 
-%Experience
+%----------------------------------------------------------------------------------------
+%   EXPERIENCE
+%----------------------------------------------------------------------------------------
 \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
-
-
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+\begin{joblong}{Backend Developer --- GIGLIO.COM S.p.A.}{\footnotesize Jan 2022 - Jan 2026}
+    \item Redesigned the e-commerce catalog ranking system from scratch, incorporating asynchronous and incremental updates with BullMQ and MongoDB, cutting rank synchronization times by 90\% in the worst-case scenarios.
+    \item Developed a cross-platform routing and origin-tracking server, allowing the launch of the e-commerce's mobile app and the centralization of web resources.
+    \item Integrated Atlas Search’s semantic search into the e-commerce platform, boosting search performance by 15\% and improving both user experience and results availability.
+    \item Devised and implemented a wishlist sharing system, complete with per-user, revocable read/write authorization rules.
 \end{joblong}
+
+\begin{jobshort}{Junior Backend Developer --- Manpower S.r.l.}{\footnotesize Mar 2021 - Jan 2022}
+Development of modern, technical back-end solutions within the microservice-based software ecosystems of clients.
+\end{jobshort}
   
-%Projects
+%----------------------------------------------------------------------------------------
+%   PROJECTS
+%----------------------------------------------------------------------------------------
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+    \textbf{stateofneptune.com} & \hfill \href{https://www.stateofneptune.com}{\footnotesize https://www.stateofneptune.com} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{State Of Neptune's official band website. Single page application built with the Qwik framework and styled using TailwindCSS.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Alea} & \hfill \href{https://github.com/nin93/alea}{\footnotesize https://github.com/nin93/alea} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{Utility library to work with most known probability distributions. Features pseudo-random number generator (PRNG) implementations, high-level APIs for repeatable random sampling and cumulative distribution functions (CDF) computing.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Talgene} & \hfill \href{https://github.com/nin93/talgene}{\footnotesize https://github.com/nin93/talgene} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{Abstraction layer over genetic algorithm implementations featuring auto-iterations over generation advances and built-in genetic cross functions.}  \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -184,34 +173,53 @@ long long line of blah blah that will wrap when the table fills the column width
 %----------------------------------------------------------------------------------------
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
-
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
-
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
+    2018 - 2022 & Physics Bachelor's Degree at \textbf{University of Palermo} \hfill \footnotesize (discontinued) \\ 
+    2018 & High School Diploma at \textbf{Scientific high school B. Croce} \hfill \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
+%	SKILLS AND COMPETENCIES
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+    Languages: &  \textbf{TypeScript}, \textbf{JavaScript}, \textbf{Rust}, \textbf{Python}, \textbf{C}, \textbf{Bash}, \textbf{HTML5}, \textbf{CSS3}\\
+    Libraries, frameworks: & \textbf{NestJS}, \textbf{React}, \textbf{Next.js}, \textbf{RxJS}, \textbf{TailwindCSS}\\
+    Infrastructure: & \textbf{Docker}, \textbf{GNU/Linux}, \textbf{RabbitMQ}, \textbf{BullMQ}, \textbf{Redis}\\
+    Databases: & \textbf{PostgreSQL}, \textbf{MySQL}\\
+    API Design: & \textbf{REST}, \textbf{gRPC}, \textbf{GraphQL}, \textbf{SOAP}\\
+    Version control: & \textbf{Git}\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    \textbf{Analytical quick thinking}: Ability to promptly identify incident culprits and provide mitigation and fulfilling solutions. \\
+    \textbf{Autonomy and self-learning}: Mastery of new technologies through self-initiative to solve real problems. \\
+    \textbf{Adaptability}: Flexibility and managing change in fast-paced, dynamic and high-demanding environments. \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%  Languages
+%----------------------------------------------------------------------------------------
+\section{Languages}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    \textbf{Upper Intermediate English (B2)} & \hfill Language Center - University of Palermo \\
+    \textbf{Italian Native Speaker (C1)}
 \end{tabularx}
 
 \vfill
 \center{\footnotesize Last updated: \today}
+
+%----------------------------------------------------------------------------------------
+%	FOOTER
+%----------------------------------------------------------------------------------------
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{
+     \footnotesize \textit{I hereby authorize the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR) for the purpose of recruitment and selection}
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\pagestyle{plain}
 
 \end{document}
