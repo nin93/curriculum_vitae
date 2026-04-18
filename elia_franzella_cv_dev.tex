@@ -39,7 +39,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.91]{geometry}
+\usepackage[scale=0.9]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -82,7 +82,7 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[0.5pt]
     \end{tabularx}
     }
     {
@@ -91,10 +91,10 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[0.5pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=$\circ$]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=$\circ$]
     }
     {
     \end{itemize}
@@ -175,17 +175,17 @@ Development of modern, technical backend solutions within the microservice-based
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{stateofneptune.com} & \hfill \href{https://www.stateofneptune.com}{\footnotesize https://www.stateofneptune.com} \\[3.75pt]
+    \textbf{stateofneptune.com} & \hfill \href{https://www.stateofneptune.com}{\footnotesize https://www.stateofneptune.com} \\[0pt]
     \multicolumn{2}{@{}X@{}}{State Of Neptune's official band website. Single page application built with the Qwik framework and styled using TailwindCSS.}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Alea} & \hfill \href{https://github.com/nin93/alea}{\footnotesize https://github.com/nin93/alea} \\[3.75pt]
+    \textbf{Alea} & \hfill \href{https://github.com/nin93/alea}{\footnotesize https://github.com/nin93/alea} \\[0pt]
     \multicolumn{2}{@{}X@{}}{Utility library to work with most known probability distributions. Features pseudo-random number generator (PRNG) implementations, high-level APIs for repeatable random sampling and cumulative distribution functions (CDF) computing.}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Talgene} & \hfill \href{https://github.com/nin93/talgene}{\footnotesize https://github.com/nin93/talgene} \\[3.75pt]
+    \textbf{Talgene} & \hfill \href{https://github.com/nin93/talgene}{\footnotesize https://github.com/nin93/talgene} \\[0pt]
     \multicolumn{2}{@{}X@{}}{Abstraction layer over genetic algorithm implementations featuring auto-iterations over generation advances and built-in genetic cross functions.}  \\
 \end{tabularx}
 
