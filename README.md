@@ -1,8 +1,8 @@
-# My Automatic Curriculum Vitæ
+# My Automatic Curriculum Vitae
 
 This is a repository to store and deploy automatically my CV by using GitHub actions and pages.
 
-You can view generated [cv](https://nin93.github.io/curriculum_vitae/elia_franzella_cv_dev.pdf) here.
+You can view generated cv [here](https://cv.franzella.dev).
 
 If you have the interest, visit [my portfolio](https://www.franzella.dev) as well.
 
