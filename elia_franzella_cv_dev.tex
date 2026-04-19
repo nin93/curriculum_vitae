@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,9pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES
@@ -38,8 +38,8 @@
 %other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[scale=0.92]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -82,7 +82,7 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[0.5pt]
+        \textbf{#1} & \hfill & {\footnotesize #2} \\[0.5pt]
     \end{tabularx}
     }
     {
@@ -91,7 +91,7 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[0.5pt]
+    \textbf{#1} & \hfill & {\footnotesize #2} \\[0.5pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=$\circ$]
@@ -100,8 +100,6 @@
     \end{itemize}
     \end{minipage}    
     }
-
-
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -135,23 +133,39 @@ Software developer with 5 years of experience designing and implementing scalabl
 %----------------------------------------------------------------------------------------
 %   WORK HISTORY
 %----------------------------------------------------------------------------------------
+
 \section{Work History}
 
-\begin{joblong}{Backend Developer -- GIGLIO.COM S.p.A.}{\footnotesize Jan 2022 / Jan 2026 -- Palermo, Italy}
+\begin{joblong}{Backend Developer -- GIGLIO.COM S.p.A.}{Jan 2022 / Jan 2026 -- Palermo, Italy}
     \item Redesigned the e-commerce catalog ranking system from scratch, incorporating asynchronous and incremental updates with BullMQ and MongoDB, cutting rank synchronization times by 90\% in the worst-case scenarios.
-    \item Developed a cross-platform routing and origin-tracking server, allowing the launch of the e-commerce's mobile app and the centralization of web resources.
+    \item Developed a cross-platform routing and origin-tracking server, allowing the launch of the e-commerce mobile app and the centralization of web resources.
     \item Integrated Atlas Search’s semantic search into the e-commerce platform, boosting search performance by 15\% and improving both user experience and results availability.
-    \item Devised and implemented a wishlist sharing system, complete with per-user, revocable read/write authorization rules.
+    \item Optimized several APIs using advanced caching patterns backed by Redis, reducing retrieval times by 70\% on average while retaining data freshness.
+    \item Rescued -- and extended with custom Bash scripts -- a legacy Linux CUPS printing system, using Nmap and ARP utilities to inspect and audit networks.
 \end{joblong}
 
-\begin{jobshort}{Junior Backend Developer -- Manpower S.r.l.}{\footnotesize Mar 2021 / Jan 2022 -- Palermo, Italy}
+\vspace{-8pt}
+Proficiencies: {\footnotesize \textbf{TypeScript}, \textbf{JavaScript}, \textbf{NestJS}, \textbf{MySQL}, \textbf{MongoDB}, \textbf{Redis}, \textbf{GraphQL}, \textbf{REST}, \textbf{gRPC}, \textbf{GNU/Linux}, \textbf{Docker}, \textbf{Git}.}
+
+\begin{jobshort}{Junior Backend Developer -- Manpower S.r.l.}{Mar 2021 / Jan 2022 -- Palermo, Italy}
 Development of modern, technical backend solutions within the microservice-based software ecosystems of clients.
 \end{jobshort}
   
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
+
 \section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    Languages: & {\footnotesize \textbf{TypeScript/JavaScript} (Node.js), \textbf{Rust}, \textbf{Python}, \textbf{C/C++}, \textbf{Bash}, \textbf{HTML5}, \textbf{CSS3}} \\
+    Frameworks, libraries: & {\footnotesize \textbf{NestJS} (microservices), \textbf{React}, \textbf{Next.js}, \textbf{Qwik}, \textbf{TailwindCSS}, \textbf{Jest} (unit, end-to-end testing)} \\
+    Infrastructure: & {\footnotesize \textbf{Docker}, \textbf{GNU/Linux}, \textbf{RabbitMQ}, \textbf{BullMQ}} \\
+    Databases: & {\footnotesize \textbf{MySQL}, \textbf{PostgreSQL}, \textbf{MongoDB}, \textbf{Redis}} \\
+    API design: & {\footnotesize \textbf{REST}, \textbf{gRPC}, \textbf{GraphQL}, \textbf{SOAP}} \\
+    Methodologies: & {\footnotesize \textbf{Agile}, \textbf{Scrum}, \textbf{CI/CD}} \\
+    Version control: & {\footnotesize \textbf{Git}} \\
+\end{tabularx}
+
 \begin{tabularx}{\linewidth}{@{}l X@{}}
     \textbf{Analytical quick thinking}: Ability to promptly identify incident culprits and provide mitigation and fulfilling solutions. \\
     \textbf{Autonomy and self-learning}: Mastery of new technologies through self-initiative to solve real problems. \\
@@ -159,56 +173,46 @@ Development of modern, technical backend solutions within the microservice-based
     \textbf{Adaptability}: Flexibility and managing change in fast-paced, dynamic and high-demanding environments. \\
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-    Languages: &  \textbf{TypeScript}, \textbf{JavaScript}, \textbf{Rust}, \textbf{Python}, \textbf{C/C++}, \textbf{Bash}, \textbf{HTML5}, \textbf{CSS3}\\
-    Libraries, frameworks: & \textbf{NestJS}, \textbf{React}, \textbf{Next.js}, \textbf{Qwik}, \textbf{RxJS}, \textbf{TailwindCSS}, \textbf{Jest} (unit, end-to-end)\\
-    Infrastructure: & \textbf{Docker}, \textbf{GNU/Linux}, \textbf{RabbitMQ}, \textbf{BullMQ}\\
-    Databases: & \textbf{MySQL}, \textbf{PostgreSQL}, \textbf{MongoDB}, \textbf{Redis}\\
-    API design: & \textbf{REST}, \textbf{gRPC}, \textbf{GraphQL}, \textbf{SOAP}\\
-    Methodologies: & \textbf{Agile}, \textbf{Scrum}, \textbf{CI/CD}\\
-    Version control: & \textbf{Git}\\
-\end{tabularx}
-
 %----------------------------------------------------------------------------------------
 %   PROJECTS
 %----------------------------------------------------------------------------------------
+
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{stateofneptune.com} & \hfill \href{https://www.stateofneptune.com}{\footnotesize https://www.stateofneptune.com} \\[0pt]
-    \multicolumn{2}{@{}X@{}}{State Of Neptune's official band website. Single page application built with the Qwik framework and styled using TailwindCSS.}  \\
+    \textbf{stateofneptune.com} & \hfill \href{https://www.stateofneptune.com}{\footnotesize Link to Demo } \\[0pt]
+    \multicolumn{2}{@{}X@{}}{State Of Neptune’s official band website. Single page application built with the Qwik framework and styled using TailwindCSS.}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Alea} & \hfill \href{https://github.com/nin93/alea}{\footnotesize https://github.com/nin93/alea} \\[0pt]
+    \textbf{Alea} & \hfill \href{https://github.com/nin93/alea}{\footnotesize Link to Code } \\[0pt]
     \multicolumn{2}{@{}X@{}}{Utility library to work with most known probability distributions. Features pseudo-random number generator (PRNG) implementations, high-level APIs for repeatable random sampling and cumulative distribution functions (CDF) computing.}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Talgene} & \hfill \href{https://github.com/nin93/talgene}{\footnotesize https://github.com/nin93/talgene} \\[0pt]
+    \textbf{Talgene} & \hfill \href{https://github.com/nin93/talgene}{\footnotesize Link to Code } \\[0pt]
     \multicolumn{2}{@{}X@{}}{Abstraction layer over genetic algorithm implementations featuring auto-iterations over generation advances and built-in genetic cross functions.}  \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
+
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
-    (discontinued) & Physics Bachelor's Degree at \textbf{University of Palermo} \hfill \footnotesize Palermo, Italy \\ 
+    (discontinued) & Physics Bachelor’s Degree at \textbf{University of Palermo} \hfill \footnotesize Palermo, Italy \\ 
     & High School Diploma at \textbf{Scientific high school B. Croce} \hfill \footnotesize Palermo, Italy \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %  LANGUAGES
 %----------------------------------------------------------------------------------------
+
 \section{Languages}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
     \textbf{Upper Intermediate English} (B2) & \hfill \footnotesize Academic Language Center - University of Palermo \\
     \textbf{Italian Native Speaker} (C1)
 \end{tabularx}
-
-\vfill
-\center{\footnotesize Last updated: \today}
 
 %----------------------------------------------------------------------------------------
 %	FOOTER
@@ -217,7 +221,7 @@ Development of modern, technical backend solutions within the microservice-based
 \fancypagestyle{plain}{%
 \fancyhf{} % clear all header and footer fields
 \fancyfoot[C]{
-     \footnotesize \textit{I hereby authorize the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR) for the purpose of recruitment and selection}
+     \scriptsize \textit{I hereby authorize the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR) for the purpose of recruitment and selection}
 }
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}}

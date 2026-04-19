@@ -1,15 +1,18 @@
-NAME=elia_franzella_cv_dev
+NAME_EN=elia_franzella_cv_dev
 
-all: pdf opengraph-image
+all: pdf-en opengraph-image
 
-pdf:
-	latexmk -pdf ${NAME}.tex
+pdf-en:
+	latexmk -pdf ${NAME_EN}.tex
 
-opengraph-image: pdf
-	magick -density 128 ${NAME}.pdf -flatten -crop x595+0+0 +repage opengraph-image.jpg
+opengraph-image: pdf-en
+	magick -density 150 ${NAME_EN}.pdf -flatten -crop x40%+0+0 +repage opengraph-image.jpg
 
 clean:
-	rm -f ${NAME}.aux ${NAME}.bbl ${NAME}.bcf ${NAME}.fdb_latexmk ${NAME}.fls ${NAME}.log ${NAME}.out ${NAME}.run.xml ${NAME}.blg ${NAME}.toc *\~
+	rm -f \
+		${NAME_EN}.aux ${NAME_EN}.bbl ${NAME_EN}.bcf ${NAME_EN}.fls ${NAME_EN}.fdb_latexmk \
+		${NAME_EN}.log ${NAME_EN}.out ${NAME_EN}.blg ${NAME_EN}.toc ${NAME_EN}.run.xml \
+	  *\~
 
 distclean: clean
-	rm -f ${NAME}.pdf
+	rm -f ${NAME_EN}.pdf
